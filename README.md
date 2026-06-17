@@ -27,24 +27,33 @@ The system helps candidates evaluate their resumes against predefined job requir
 - Pandas
 - NumPy
 - Scikit-Learn
-
+<br>
 ## Project Structure
-
+<br>
 backend/
+<br>
 │
+<br>
 ├── main.py
+<br>
 ├── parser.py
+<br>
 ├── matcher.py
+<br>
 ├── jobs_data.py
+<br>
 ├── requirements.txt
+<br>
 └── Procfile
+<br>
 
-
+<br><br>
 ## API Endpoints
-
+<br><br>
 ### Health Check
-
+<br><br>
 http
+<br><br>
 GET /
 
 {
@@ -52,33 +61,52 @@ GET /
 }
 
 **Analyze Resume
+<br><br>
 POST /analyse
 
 **Input:
-
+<br><br>
 file: resume.pdf
-
+<br><br>
 **Response Example:
 
 {
+<br>
   "resume_skills": [
+  <br>
     "Python",
+    <br>
     "SQL",
+    <br>
     "Machine Learning"
+    <br>
   ],
+  <br>
   "matches": [
+  <br>
     {
+    <br>
       "job": "Data Analyst",
+      <br>
       "score": 85
+      <br>
     }
+    <br>
   ],
+  <br>
   "priority_gaps": [
+  <br>
     "Power BI",
+    <br>
     "Tableau"
+    <br>
   ]
+  <br>
 }
+<br>
 <br><br>
 **Get Available Jobs**
+<br>
 GET /jobs
 
 Returns all predefined job profiles.
@@ -106,9 +134,11 @@ Returns all predefined job profiles.
 <br>
 Backend is deployed on Render.
 
+<br><br>
 **Build Command**
 <br>
 pip install -r requirements.txt
+<br>
 <br>
 **Start Command**
 <br>
@@ -116,6 +146,7 @@ uvicorn main:app --host 0.0.0.0 --port $PORT
 <br>
 <br>
 **Future Scope**
+<br><br>
 -AI-Based Job Recommendations
 <br>
 -ATS Resume Scoring
